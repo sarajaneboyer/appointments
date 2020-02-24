@@ -1,5 +1,5 @@
 class PatientsController < ApplicationController
-  before_action :set_user, only: [:show, :destroy]
+  before_action :set_patient, only: [:show, :destroy]
   def index
     @patients = Patient.all
   end
@@ -15,7 +15,7 @@ class PatientsController < ApplicationController
   def create
     @patient = Patient.new(patient_params)
 
-    if patient.save
+    if @patient.save
       redirect_to @patient
     else
       render :new
