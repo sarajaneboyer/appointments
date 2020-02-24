@@ -32,6 +32,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'semantic-ui-sass'
   gem 'faker'
   gem 'better_errors'
   gem 'pry-rails'
