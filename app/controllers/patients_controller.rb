@@ -1,5 +1,5 @@
 class PatientsController < ApplicationController
-  before_action :set_user, only [:show, :destroy]
+  before_action :set_user, only: [:show, :destroy]
   def index
     @patients = Patient.all
   end
