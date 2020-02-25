@@ -2,7 +2,7 @@ class ApptsController < ApplicationController
   before_action :set_doctor
   def index
     @physicians = @doctor.appts.where(role: 'physician')
-    @persons = @person.appts.where(role: 'person')
+    @persons = @patient.appts.where(role: 'person')
   end
 
   def new
