@@ -3,5 +3,15 @@
 
 <h2>Doctor</h2>
 <ul>
-  <%  %>
+  <% @physicians.each do |p| %>
+      <%= p.doctor.name %>
+  <% end %>
+</ul>
+
+<h2> Patient </h2>
+  <% @persons.each do |p| %>
+    <%= p.patient.full_name %>
+  <% end %>
+<ul>
+  <% %>
 </ul>
