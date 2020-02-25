@@ -15,9 +15,14 @@ class ApptsController < ApplicationController
     if @appt.save
       redirect_to doctor_appts_path(@doctor)
     else
-      render: new
+      render :new
     end
-    
+  end
+
+  def destroy
+    @appt = @doctor.appt.find(params[:id])
+    @appt.destroy
+    redirect_to doctor_appts_path(@doctor)
   end
 
   private
@@ -27,7 +32,7 @@ class ApptsController < ApplicationController
     end
 
     def appt_params
-      params.require(:appt).permit(:role, :patient_id)
+      params.require(:appt).permit(:role, :patient_id, :doctor_id, :day)
     end
 
 end

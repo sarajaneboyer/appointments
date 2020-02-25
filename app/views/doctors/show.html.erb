@@ -3,7 +3,7 @@
 
 <h2> Patients </h2>
 <ul>
-<% @doctor.patients.each do |doctor| %>
+<% @doctor.patients.each do |patient| %>
   <li>
     <%= link_to patient.full_name, patient %>
   </li>
@@ -11,4 +11,5 @@
 </ul>
 
 <br /><br /><br /><hr />
+<%= link_to 'Appointments', doctor_appts_path(@doctor), class: "ui green button" %>
 <%= link_to 'Delete Doctor', @doctor, method: :delete, class: "ui red button" %>

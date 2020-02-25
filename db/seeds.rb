@@ -20,7 +20,7 @@ roles = ['physician', 'person']
       Appt.create(
         role: roles.sample,
         doctor_id: doctor.id,
-        patient_id: patient_id
+        patient_id: patient.id
       )
     end
 end
