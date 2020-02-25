@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 2020_02_24_223214) do
 
   create_table "appts", force: :cascade do |t|
     t.string "day"
+    t.string "role"
     t.bigint "patient_id", null: false
     t.bigint "doctor_id", null: false
     t.datetime "created_at", precision: 6, null: false
