@@ -1,17 +1,27 @@
 <h1><%= @doctor.name %>: Appointments</h1>
 <%= link_to 'Add New Appointment', new_doctor_appt_path(@doctor) %>
+<br /><br />
 
-<h2>Doctor</h2>
+<h2>D
+octor</h2>
 <ul>
   <% @physicians.each do |p| %>
+    <li>
       <%= p.doctor.name %>
+      <br />
+      <%= link_to 'Delete', doctor_appt_path(@doctor, physician), method: :delete %>
+      </li>
   <% end %>
 </ul>
 
+
 <h2> Patient </h2>
-  <% @persons.each do |p| %>
-    <%= p.patient.full_name %>
-  <% end %>
-<ul>
-  <% %>
-</ul>
+  <ul>
+    <% @persons.each do |p| %>
+      <li>
+      <%= p.patient.full_name %>
+      <br />
+      <%= link_to 'Delete', doctor_appt_path(@doctor, person), method: :delete %>
+      </li>
+    <% end %>
+  </ul>
